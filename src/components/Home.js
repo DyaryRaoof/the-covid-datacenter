@@ -5,7 +5,7 @@ import europe from '../images/europe-map.png';
 
 const countries = [
   { name: 'CZECH REPUBLIC', number: 119, id: 1 },
-  { name: 'CZECH REPUBLIC', number: 119, id: 2 },
+  { name: 'ITALY', number: 119, id: 2 },
   { name: 'CZECH REPUBLIC', number: 119, id: 3 },
   { name: 'CZECH REPUBLIC', number: 119, id: 4 },
   { name: 'CZECH REPUBLIC', number: 119, id: 5 },
