@@ -34,10 +34,8 @@ const Detail = () => (
         {countries.map((country, index) => (
           <div className={index % 2 === 0 ? 'light-background d-flex justify-content-between align-items-center ps-3' : 'd-flex justify-content-between align-items-center ps-3'} key={country.id}>
             <h5>Prague</h5>
-
             <div className="d-flex  align-items-center justify-content-center text-end my-3 me-2">
               <span className="me-3">965 views</span>
-
               <div className="d-flex justify-content-end me-2 mt-2">
                 <BsArrowRightCircle />
               </div>

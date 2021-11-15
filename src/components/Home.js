@@ -1,6 +1,7 @@
 import { Row, Col } from 'react-bootstrap';
 import './Home.css';
 import { BsArrowRightCircle } from 'react-icons/bs';
+import { NavLink } from 'react-router-dom';
 import europe from '../images/europe-map.png';
 
 const countries = [
@@ -20,15 +21,15 @@ const Home = () => {
     if (index === nextLightColor && alternate) {
       alternate = false;
       nextLightColor = index + 3;
-      return 'light-background';
+      return 'light-background grid-item-navlink';
     }
     if (index === nextLightColor && alternate === false) {
       alternate = true;
       nextLightColor = index + 1;
-      return 'light-background';
+      return 'light-background grid-item-navlink';
     }
 
-    return '';
+    return 'grid-item-navlink';
   };
   return (
     <main>
@@ -49,19 +50,21 @@ const Home = () => {
       <section>
         <div className="country-grid">
           {countries.map((country, index) => (
-            <div className={alternateColors(index)} key={country.id}>
-              <div className="d-flex justify-content-end me-2 mt-2">
-                <BsArrowRightCircle />
+            <NavLink to="/detail" key={country.id} className={alternateColors(index)}>
+              <div>
+                <div className="d-flex justify-content-end me-2 mt-2">
+                  <BsArrowRightCircle />
+                </div>
+                <div className="d-flex flex-column align-items-end justify-content-end text-end my-3 me-2 single-grid-item">
+                  <h1>
+                    CZECH
+                    <br />
+                    REPUBLIC
+                  </h1>
+                  <span>965</span>
+                </div>
               </div>
-              <div className="d-flex flex-column align-items-end justify-content-end text-end my-3 me-2 single-grid-item">
-                <h1>
-                  CZECH
-                  <br />
-                  REPUBLIC
-                </h1>
-                <span>965</span>
-              </div>
-            </div>
+            </NavLink>
           ))}
         </div>
       </section>

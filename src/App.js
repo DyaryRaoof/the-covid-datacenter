@@ -6,8 +6,8 @@ import Detail from './components/Detail';
 function App() {
   return (
     <main>
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/detail" element={<Detail />} />

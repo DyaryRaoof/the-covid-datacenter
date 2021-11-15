@@ -21,3 +21,8 @@
 .light-background {
   background-color: #ff5694;
 }
+
+.grid-item-navlink {
+  color: white;
+  text-decoration: none;
+}
