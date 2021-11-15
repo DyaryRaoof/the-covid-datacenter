@@ -2,19 +2,21 @@ import { Row, Col } from 'react-bootstrap';
 import './Home.css';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { NavLink } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
 import europe from '../images/europe-map.png';
+import fetchStates from '../api';
 
-const countries = [
-  { name: 'CZECH REPUBLIC', number: 119, id: 1 },
-  { name: 'ITALY', number: 119, id: 2 },
-  { name: 'CZECH REPUBLIC', number: 119, id: 3 },
-  { name: 'CZECH REPUBLIC', number: 119, id: 4 },
-  { name: 'CZECH REPUBLIC', number: 119, id: 5 },
-  { name: 'CZECH REPUBLIC', number: 119, id: 6 },
-  { name: 'CZECH REPUBLIC', number: 119, id: 7 },
-  { name: 'CZECH REPUBLIC', number: 119, id: 8 },
-];
 const Home = () => {
+  const states = useSelector((state) => state.statesReducer.states);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    if (states.length === 0) {
+      dispatch(fetchStates());
+    }
+  }, []);
+
   let alternate = true;
   let nextLightColor = 0;
   const alternateColors = (index) => {
@@ -31,6 +33,7 @@ const Home = () => {
 
     return 'grid-item-navlink';
   };
+
   return (
     <main>
       <section className="top-section">
@@ -40,28 +43,24 @@ const Home = () => {
           </Col>
           <Col>
             <div className=" top-section-content d-flex flex-column justify-content-center align-items-start">
-              <h1>Europe</h1>
+              <h1>United States</h1>
               <span>6,958</span>
             </div>
           </Col>
         </Row>
       </section>
-      <span className="stats">STATS BY COUNTRY</span>
+      <span className="stats">CONFIRMED COVID CASES</span>
       <section>
         <div className="country-grid">
-          {countries.map((country, index) => (
-            <NavLink to="/detail" key={country.id} className={alternateColors(index)}>
+          {states.map((state, index) => (
+            <NavLink to="/detail" key={state.id} className={alternateColors(index)}>
               <div>
                 <div className="d-flex justify-content-end me-2 mt-2">
                   <BsArrowRightCircle />
                 </div>
                 <div className="d-flex flex-column align-items-end justify-content-end text-end my-3 me-2 single-grid-item">
-                  <h1>
-                    CZECH
-                    <br />
-                    REPUBLIC
-                  </h1>
-                  <span>965</span>
+                  <h1>{state.name}</h1>
+                  <span>{state.today_confirmed}</span>
                 </div>
               </div>
             </NavLink>
