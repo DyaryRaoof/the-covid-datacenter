@@ -1,3 +1,7 @@
-const Header = () => <div>Hello from Header</div>;
+const Header = () => (
+  <header>
+    <span>most views</span>
+  </header>
+);
 
 export default Header;
