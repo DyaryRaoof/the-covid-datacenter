@@ -19,10 +19,14 @@
 }
 
 .light-background {
-  background-color: #ff5694;
+  background-color: #e7578e;
 }
 
 .grid-item-navlink {
   color: white;
-  text-decoration: none;
+  border: none;
+}
+
+.dark-background {
+  background-color: #d6487e;
 }

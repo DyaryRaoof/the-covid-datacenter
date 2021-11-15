@@ -1,11 +1,12 @@
 import { Row, Col } from 'react-bootstrap';
 import './Home.css';
 import { BsArrowRightCircle } from 'react-icons/bs';
-import { NavLink } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
 import europe from '../images/europe-map.png';
 import fetchStates from '../api';
+import { setCurrentStateCities } from '../redux/states/states';
 
 const Home = () => {
   const states = useSelector((state) => state.statesReducer.states);
@@ -16,6 +17,8 @@ const Home = () => {
       dispatch(fetchStates());
     }
   }, []);
+
+  const navigate = useNavigate();
 
   let alternate = true;
   let nextLightColor = 0;
@@ -31,7 +34,7 @@ const Home = () => {
       return 'light-background grid-item-navlink';
     }
 
-    return 'grid-item-navlink';
+    return 'grid-item-navlink dark-background';
   };
 
   return (
@@ -53,7 +56,16 @@ const Home = () => {
       <section>
         <div className="country-grid">
           {states.map((state, index) => (
-            <NavLink to="/detail" key={state.id} className={alternateColors(index)}>
+            <button
+              onClick={() => {
+                dispatch(setCurrentStateCities(state.id));
+                navigate('/detail');
+              }}
+              type="button"
+              to="/deatil"
+              key={state.id}
+              className={alternateColors(index)}
+            >
               <div>
                 <div className="d-flex justify-content-end me-2 mt-2">
                   <BsArrowRightCircle />
@@ -63,7 +75,7 @@ const Home = () => {
                   <span>{state.today_confirmed}</span>
                 </div>
               </div>
-            </NavLink>
+            </button>
           ))}
         </div>
       </section>
