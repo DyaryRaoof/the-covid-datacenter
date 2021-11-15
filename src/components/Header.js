@@ -1,13 +1,14 @@
 import { BsChevronLeft, BsFillGearFill } from 'react-icons/bs';
 import { FaMicrophone } from 'react-icons/fa';
+import './Header.css';
 
 const Header = () => (
   <header>
-    <BsChevronLeft />
+    <BsChevronLeft className="mx-1" />
     <span>most views</span>
     <span>
-      <FaMicrophone />
-      <BsFillGearFill />
+      <FaMicrophone className="me-3" />
+      <BsFillGearFill className="mx-1" />
     </span>
   </header>
 );
