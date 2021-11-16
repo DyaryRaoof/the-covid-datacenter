@@ -44,7 +44,7 @@ const Home = () => {
       <section className="top-section">
         <Row>
           <Col>
-            <img className="map opacity-25 ms-4" src={unitedStates} alt="Europe map" />
+            <img data-testid="image" className="map opacity-25 ms-4" src={unitedStates} alt="Europe map" />
           </Col>
           <Col>
             <div className=" top-section-content d-flex flex-column justify-content-center align-items-start">

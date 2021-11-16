@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`test with jest snapshot should render correctly 1`] = `
+<main>
+  <section
+    className="top-section"
+    data-testid="section"
+  >
+    <div
+      className="d-flex justify-content-between"
+    >
+      <div>
+        <img
+          alt="Europe map"
+          className="map opacity-25 ms-4"
+          src="united-states-map.png"
+        />
+      </div>
+      <div>
+        <div
+          className=" top-section-content d-flex flex-column justify-content-center align-items-end me-3"
+        >
+          <h1
+            className="text-end"
+          >
+            
+          </h1>
+          <span>
+            0
+          </span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <span
+    className="stats"
+  >
+    TODAYS CONFIRMED CASES
+  </span>
+  <section>
+    <div
+      className="town"
+    />
+  </section>
+</main>
+`;

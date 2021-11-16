@@ -18,7 +18,7 @@ const Detail = () => {
 
   return (
     <main>
-      <section className="top-section">
+      <section data-testid="section" className="top-section">
         <div className="d-flex justify-content-between">
           <div>
             <img className="map opacity-25 ms-4" src={unitedStates} alt="Europe map" />
