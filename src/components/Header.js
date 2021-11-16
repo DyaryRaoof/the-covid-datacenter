@@ -8,7 +8,7 @@ const Header = () => (
     <NavLink to="/" className="left-arrow-icon">
       <BsChevronLeft className="mx-1" />
     </NavLink>
-    <span>most views</span>
+    <span>the covid dataset</span>
     <span>
       <FaMicrophone className="me-3" />
       <BsFillGearFill className="mx-1" />
