@@ -11,7 +11,7 @@ export const setCurrentStateCities = (payload) => ({
   payload,
 });
 
-const initialState = { states: [] };
+const initialState = { states: [], countryWideCases: 0, currentState: { name: '', today_confirmed: 0, sub_regions: [] } };
 
 const statesReducer = (state = initialState, action) => {
   switch (action.type) {
@@ -20,11 +20,12 @@ const statesReducer = (state = initialState, action) => {
         ...state,
         states: action.payload.regions,
         countryWideCases: action.payload.today_confirmed,
+        currentState: action.payload.regions[0],
       };
     case SET_CURRENT_STATE_CITIES:
       return {
         ...state,
-        currentState: state.states.filter((state) => state.id === action.payload),
+        currentState: state.states.filter((state) => state.id === action.payload)[0],
       };
     default:
       return state;

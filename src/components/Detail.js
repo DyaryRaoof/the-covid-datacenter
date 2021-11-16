@@ -1,25 +1,35 @@
-import { Row, Col } from 'react-bootstrap';
 import { BsArrowRightCircle } from 'react-icons/bs';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
+import { useEffect } from 'react';
 import unitedStates from '../images/united-states-map.png';
+import fetchStates from '../api';
+
 import './Details.css';
 
 const Detail = () => {
-  const singleState = useSelector((state) => state.statesReducer.currentState[0]);
+  const dispatch = useDispatch();
+  const singleState = useSelector((state) => state.statesReducer.currentState);
+
+  useEffect(() => {
+    if (singleState.name === '') {
+      dispatch(fetchStates());
+    }
+  }, []);
+
   return (
     <main>
       <section className="top-section">
-        <Row>
-          <Col>
+        <div className="d-flex justify-content-between">
+          <div>
             <img className="map opacity-25 ms-4" src={unitedStates} alt="Europe map" />
-          </Col>
-          <Col>
+          </div>
+          <div>
             <div className=" top-section-content d-flex flex-column justify-content-center align-items-end me-3">
-              <h1>{singleState.name}</h1>
+              <h1 className="text-end">{singleState.name}</h1>
               <span>{singleState.today_confirmed}</span>
             </div>
-          </Col>
-        </Row>
+          </div>
+        </div>
       </section>
       <span className="stats">TODAYS CONFIRMED CASES</span>
       <section>
