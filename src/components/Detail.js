@@ -1,21 +1,10 @@
 import { BsArrowRightCircle } from 'react-icons/bs';
-import { useSelector, useDispatch } from 'react-redux';
-import { useEffect } from 'react';
 import unitedStates from '../images/united-states-map.png';
-import fetchStates from '../api';
 
 import './Details.css';
 
 const Detail = () => {
-  const dispatch = useDispatch();
-  const singleState = useSelector((state) => state.statesReducer.currentState);
-
-  useEffect(() => {
-    if (singleState.name === '') {
-      dispatch(fetchStates());
-    }
-  }, []);
-
+  const singleState = JSON.parse(localStorage.getItem('currentState'));
   return (
     <main>
       <section data-testid="section" className="top-section">

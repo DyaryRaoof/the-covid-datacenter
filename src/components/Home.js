@@ -61,6 +61,7 @@ const Home = () => {
             <button
               onClick={() => {
                 dispatch(setCurrentStateCities(state.id));
+                localStorage.setItem('currentState', JSON.stringify(state));
                 navigate('/detail');
               }}
               type="button"
