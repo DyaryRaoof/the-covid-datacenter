@@ -16,7 +16,11 @@ const initialState = { states: [] };
 const statesReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_STATES:
-      return { ...state, states: action.payload };
+      return {
+        ...state,
+        states: action.payload.regions,
+        countryWideCases: action.payload.today_confirmed,
+      };
     case SET_CURRENT_STATE_CITIES:
       return {
         ...state,

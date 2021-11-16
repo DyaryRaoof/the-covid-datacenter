@@ -14,7 +14,7 @@ const BASE_URL = `https://api.covid19tracking.narrativa.com/api/${getCurrentDate
 
 const fetchSates = () => async (dispatch) => {
   const result = await axios.get(BASE_URL);
-  dispatch(getStates(result.data.dates[getCurrentDate()].countries.US.regions));
+  dispatch(getStates(result.data.dates[getCurrentDate()].countries.US));
 };
 
 export default fetchSates;

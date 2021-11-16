@@ -10,6 +10,8 @@ import { setCurrentStateCities } from '../redux/states/states';
 
 const Home = () => {
   const states = useSelector((state) => state.statesReducer.states);
+  const countryWideCases = useSelector((state) => state.statesReducer.countryWideCases);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -47,7 +49,7 @@ const Home = () => {
           <Col>
             <div className=" top-section-content d-flex flex-column justify-content-center align-items-start">
               <h1>United States</h1>
-              <span>6,958</span>
+              <span>{countryWideCases}</span>
             </div>
           </Col>
         </Row>
