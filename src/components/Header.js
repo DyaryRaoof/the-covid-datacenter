@@ -17,7 +17,7 @@ const Header = () => {
           <BsChevronLeft className="mx-1" />
         </NavLink>
       )}
-      <span>the covid dataset</span>
+      <span>the covid data center</span>
       <span>
         <FaMicrophone className="me-3" />
         <BsFillGearFill className="mx-1" />
