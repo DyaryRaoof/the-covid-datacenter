@@ -1,0 +1,32 @@
+.top-section,
+.top-section-content {
+  height: 200px;
+  background-color: #fa4f91;
+}
+
+.stats {
+  background-color: #ec4c8a;
+  margin-left: 10px;
+}
+
+.country-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.single-grid-item {
+  height: 150px;
+}
+
+.light-background {
+  background-color: #e7578e;
+}
+
+.grid-item-navlink {
+  color: white;
+  border: none;
+}
+
+.dark-background {
+  background-color: #d6487e;
+}

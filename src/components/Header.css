@@ -1,0 +1,15 @@
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 50px;
+}
+
+.left-arrow-icon {
+  color: white;
+}
+
+.hidden-icon {
+  visibility: hidden;
+}
