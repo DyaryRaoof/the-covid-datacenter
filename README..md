@@ -4,7 +4,7 @@
 
 # The Covid Data Center
 
-This was our React capstone project for Microverse curiculum. It is mobile web application to check a list of metrics (numeric values) for the Covid-19 that I created making use of React and Redux and the Coronavirus data API from Narrativa.com.
+This was our React capstone project for Microverse curiculum. It is mobile web application to check a list of metrics (numeric values) for the Covid-19 in United States of America that I created making use of React and Redux and the Coronavirus data API from Narrativa.com.
 
 ![screenshot](./screenshot1.png)
 
