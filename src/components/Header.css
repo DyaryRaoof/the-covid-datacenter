@@ -9,3 +9,7 @@ header {
 .left-arrow-icon {
   color: white;
 }
+
+.hidden-icon {
+  visibility: hidden;
+}
