@@ -54,7 +54,7 @@ const Home = () => {
           </Col>
         </Row>
       </section>
-      <span className="stats">CONFIRMED COVID CASES</span>
+      <span className="stats">TODAYS CONFIRMED CASES</span>
       <section>
         <div className="country-grid">
           {states.map((state, index) => (
