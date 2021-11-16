@@ -21,7 +21,7 @@ This was our React capstone project for Microverse curiculum. It is mobile web a
 - JSX
 
 ## Live Demo
-[Live Demo](https://youthful-lichterman-4505b6.netlify.app/)
+[Live Demo](https://objective-pasteur-0b310b.netlify.app/)
 
 ## Demo Video
 [Demo Video](https://www.loom.com/share/6b894b02e57d472cb6eb2375e188fa11)
