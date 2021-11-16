@@ -23,6 +23,8 @@ This was our React capstone project for Microverse curiculum. It is mobile web a
 ## Live Demo
 [Live Demo](https://youthful-lichterman-4505b6.netlify.app/)
 
+## Demo Video
+[Demo Video](https://www.loom.com/share/6b894b02e57d472cb6eb2375e188fa11)
 
 ## Getting Started
 
