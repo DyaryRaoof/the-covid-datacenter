@@ -4,7 +4,7 @@ import { BsArrowRightCircle } from 'react-icons/bs';
 import { useNavigate } from 'react-router-dom';
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import europe from '../images/europe-map.png';
+import unitedStates from '../images/united-states-map.png';
 import fetchStates from '../api';
 import { setCurrentStateCities } from '../redux/states/states';
 
@@ -42,7 +42,7 @@ const Home = () => {
       <section className="top-section">
         <Row>
           <Col>
-            <img className="w-100 opacity-25 ms-4" src={europe} alt="Europe map" />
+            <img className="map opacity-25 ms-4" src={unitedStates} alt="Europe map" />
           </Col>
           <Col>
             <div className=" top-section-content d-flex flex-column justify-content-center align-items-start">

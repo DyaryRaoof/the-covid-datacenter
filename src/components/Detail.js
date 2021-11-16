@@ -1,17 +1,17 @@
 import { Row, Col } from 'react-bootstrap';
 import { BsArrowRightCircle } from 'react-icons/bs';
 import { useSelector } from 'react-redux';
-import europe from '../images/europe-map.png';
+import unitedStates from '../images/united-states-map.png';
+import './Details.css';
 
 const Detail = () => {
   const singleState = useSelector((state) => state.statesReducer.currentState[0]);
-  console.log(singleState, ' single state');
   return (
     <main>
       <section className="top-section">
         <Row>
           <Col>
-            <img className="w-100 opacity-25 ms-4" src={europe} alt="Europe map" />
+            <img className="map opacity-25 ms-4" src={unitedStates} alt="Europe map" />
           </Col>
           <Col>
             <div className=" top-section-content d-flex flex-column justify-content-center align-items-end me-3">
