@@ -34,7 +34,7 @@ This was our React capstone project for Microverse curiculum. It is mobile web a
 - Use `npm start` to start the website;
 - Use `npm test` to run tests;
 - 
-## Authors
+## Author
 
 👤 **Dyary Raoof Bayz**
 
@@ -47,7 +47,7 @@ This was our React capstone project for Microverse curiculum. It is mobile web a
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](../../issues/).
+Feel free to check the [issues page](https://github.com/DyaryRaoof/the-covid-datacenter/issues).
 
 ## Show your support
 
